@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            
+            background-image: url('https://img.freepik.com/foto-gratis/vestibulo-hotel-borroso_1203-959.jpg?w=740&t=st=1701898014~exp=1701898614~hmac=77cd2107d986b0e87ac5e1870130d4a51e7207ce313d3889fe151a17df81263a');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        #booking-form, #rooms {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .room {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+     
+</head>
+<body>
+    <section class="seccion">
+        <header>
+            <a href="#"><img src="https://scontent.fmec2-1.fna.fbcdn.net/v/t39.30808-6/406444723_782412903648584_3553260206924279812_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=3635dc&_nc_ohc=bFpm3KIwA-UAX-92STT&_nc_ht=scontent.fmec2-1.fna&oh=00_AfDPHf2B1FcMtpWa_CGajAw7ML7gRi8nkK0dRagB0WSphQ&oe=6576536C" class="logo" alt="Logo"></a>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Habitaciones</a></li>
+                <li><a href="#">Reservas</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </header>
+    <div class="container">
+    
+        <h1> Bienvenido a nuestro hotel "Nueva Luna"</h1>
+
+        <h2>Reserva ahora</h2>
+        <form>
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="date">Fecha de llegada:</label><br>
+            <input type="date" id="date" name="date"><br>
+            <input type="submit" value="Reservar">
+
+
+        <div id="rooms">
+        <h2>Habitaciones disponibles</h2>
+        <div class="room">
+            <h3>Habitación Suite</h3>
+            <img src="https://scontent.fmec2-1.fna.fbcdn.net/v/t39.30808-6/406530708_782415386981669_4773842508481449419_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3635dc&_nc_ohc=AB9HMXFOqVoAX9Drm1W&_nc_ht=scontent.fmec2-1.fna&oh=00_AfBhd5zIFbF79bEqnZKV-Bz8qNomv6cOS4FYpOakTlDimg&oe=6575879E" alt="Habitación 1">
+            <p>La suite es un espacio de lujo de más de 60 metros cuadrados. Cuenta con una cama king-size, un área de estar, un baño privado con jacuzzi y una vista impresionante de la ciudad. Incluye servicios adicionales como acceso al salón ejecutivo, servicio de habitaciones 24/7.</p>
+            <button onclick="alert('Más información sobre la habitación 1')">Más información</button>
+        </div>
+        <div class="room">
+            <h3>Habitación Doble</h3>
+            <img src="https://scontent.fmec2-1.fna.fbcdn.net/v/t39.30808-6/406444630_782415373648337_1645993145827163935_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=3635dc&_nc_ohc=lHT4ul62orgAX98_ncu&_nc_ht=scontent.fmec2-1.fna&oh=00_AfCyAX8UInPuekLSMNEW9vQ43yglsOCH5iRuqUm1STfubQ&oe=6575776F" alt="Habitación 2">
+            <p>La habitación doble, ideal para amigos o familias, ofrece dos camas cómodas en un espacio de 30 metros cuadrados. Está equipada con un televisor de pantalla plana, un escritorio de trabajo y un baño privado. Los huéspedes pueden disfrutar de la vista de la ciudad desde la habitación.</p>
+            <button onclick="alert('Más información sobre la habitación 2')">Más información</button>
+        </div>
+        <div class="room">
+            <h3>Habitación Basica</h3>
+            <img src="https://scontent.fmec2-1.fna.fbcdn.net/v/t39.30808-6/406387177_782415376981670_8469433076194485996_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=3635dc&_nc_ohc=4TciA92CMqoAX_UpCfq&_nc_ht=scontent.fmec2-1.fna&oh=00_AfChxPeRduYOQRJQDnvR12F1rtnGK3alP6hqqa5jDGHayQ&oe=65759BB0" alt="Habitación 3">
+            <p>La habitación básica es una opción económica para viajeros que buscan comodidad y funcionalidad. A pesar de ser la oferta más asequible, cuenta con una cama cómoda, un escritorio de trabajo, un televisor de pantalla plana y un baño privado. Es ideal para aquellos que planean explorar la ciudad.</p>
+            <button onclick="alert('Más información sobre la habitación 3')">Más información</button>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var date = document.getElementById('date').value;
+        alert('Gracias ' + name + ' por su reserva el día ' + date + '! Revisaremos la disponibilidad y le enviaremos un correo a ' + email + ' con los detalles de su reserva.');
+    });
+</script>
+</body>
+</html>
+    
